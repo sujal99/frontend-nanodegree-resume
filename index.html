@@ -47,7 +47,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-    <!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <meta name="viewport" content="width=device-width">
     <link rel="import" href="bower_components/webcomponentsjs/webcomponents.js">
     <link rel="import" href="bower_components/polymer/polymer.html">
@@ -64,6 +64,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
             bottom: 0;
             left: 0;
         }
+
         paper-toolbar {
             height: 128px;
             overflow: visible;
@@ -89,9 +90,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
                 <section id="education" class="gray">
                     <h2>Education</h2>
                 </section>
-                <section id="map-div">
+                <section id="mapDiv">
                     <h2>Where I've Lived and Worked</h2>
-                    <div id="map"></div>
                 </section>
                 <section id="lets-connect" class="dark-gray">
                     <h2 class="orange center-text">Let's Connect</h2>
@@ -143,8 +143,6 @@ writing. In resumeBuilder.js, you'll be writing code that builds the resume
 dynamically when this website, index.html, is opened.
 -->
     <script src="js/resumeBuilder.js"></script>
-
-
     <!--
 These scripts are written in JavaScript. You'll be breaking them down as part of
 a quiz. Essentially, the next few lines are checking to see if you have not
@@ -152,7 +150,6 @@ changed each section of the resume. If you have not made any changes to a sectio
 of the resume, then that part of the resume does not show up. More on this in the
 course.
 -->
-
     <script type="text/javascript">
         // Notice how all of a sudden there's JavaScript inside this HTML
         // document? You can write JavaScript between <script> tags. At the end of your
@@ -164,41 +161,32 @@ course.
         //   two slashes for all following characters on a single line, or
 
         /*
-         an opening and closing set of slash asterisks for block comments.
-         */
-
+            an opening and closing set of slash asterisks for block comments.
+        */
 
 
         if (document.getElementsByClassName('flex-item').length === 0) {
-            document.getElementById('topContacts').style.backgroundColor = "black";
+            document.getElementById('topContacts').style.display = 'none';
         }
         if (document.getElementsByTagName('h1').length === 0) {
-            document.getElementById('header').style.backgroundColor = "black";
+            document.getElementById('header').style.display = 'none';
         }
         if (document.getElementsByClassName('work-entry').length === 0) {
-            document.getElementById('workExperience').style.backgroundColor = "black";
+            document.getElementById('workExperience').style.display = 'none';
         }
         if (document.getElementsByClassName('project-entry').length === 0) {
-            document.getElementById('projects').style.backgroundColor = "black";
+            document.getElementById('projects').style.display = 'none';
         }
         if (document.getElementsByClassName('education-entry').length === 0) {
-            document.getElementById('education').style.backgroundColor = "black";
+            document.getElementById('education').style.display = 'none';
         }
         if (document.getElementsByClassName('flex-item').length === 0) {
-            document.getElementById('lets-connect').style.backgroundColor = "black";
+            document.getElementById('lets-connect').style.display = 'none';
         }
         if (document.getElementById('map') === null) {
-            document.getElementById('map-div').style.backgroundColor = "black";
+            document.getElementById('mapDiv').style.display = 'none';
         }
     </script>
-
-    <!--<script type="text/javascript">-->
-    <!--$("#floating-bar").scrollToFixed;-->
-    <!--$(document).scroll(function () {-->
-    <!--$("#floating-bar").attr("sectionTitle", getTopMenu());-->
-    <!--});-->
-    <!--</script>-->
-
 </body>
 
 </html>

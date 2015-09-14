@@ -61,7 +61,6 @@ h5 {
 
 }
 
-
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -90,6 +89,9 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+}
+#topheader, #topheader > h1, #topheader > h2 {
+    display: inline;
 }
 
 .welcome-message {
@@ -130,6 +132,7 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
+  overflow: auto;
 }
 
 .flex-box {
@@ -211,4 +214,9 @@ span {
   .biopic {
     display: block;
   }
+}
+
+.main-nav {
+  height: 100%;
+  width: 20%;
 }

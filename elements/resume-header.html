@@ -1,0 +1,30 @@
+<link rel="import" href="../bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
+
+<dom-module id="resume-header">
+	<style>
+		:host {
+			height: 100%;
+			display: block;
+		}
+    .my-header {
+      height: 400px;
+    }
+	</style>
+	<template>
+		<paper-header-panel class="flex" mode="waterfall-tall">
+			<div class="paper-header my-header">
+				<div class="horizontal layout end">
+          <h1>Title</h1>
+        </div>
+			</div>
+      <div class="content">
+      </div>
+		</paper-header-panel>
+	</template>
+	<script>
+		Polymer({ is: 'resume-header'});
+	</script>
+</dom-module>

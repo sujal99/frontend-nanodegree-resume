@@ -77,7 +77,7 @@ var projects = {
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula placerat luctus. Duis at sapien enim. Duis lobortis urna eu felis vestibulum, ac suscipit augue commodo. Duis sit amet urna luctus, vehicula enim a, egestas tellus. Nullam est risus, laoreet quis nibh et, vehicula feugiat mi. Nam lacus odio, sodales sed luctus id, varius mattis diam. Pellentesque dictum rhoncus eros a rutrum. Nulla a rhoncus orci, vel ultricies lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras eu ipsum elementum, rutrum elit vehicula, scelerisque justo. Nam at tortor elit. Vestibulum vehicula pharetra purus. Pellentesque dapibus orci ut velit condimentum, ac sagittis nisl dignissim.",
 			"images": [
 				"https://pbs.twimg.com/profile_images/1130950496/agnes_despicable_me.png",
-			"http://www11.imagesandwallpapers.com/img/flipped_Cute_Despicable_Me_Agnes_HD_Wallpaper.jpg"
+				"https://pbs.twimg.com/profile_images/1130950496/agnes_despicable_me.png"
 			]
 		},
 		{
@@ -86,7 +86,7 @@ var projects = {
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula placerat luctus. Duis at sapien enim. Duis lobortis urna eu felis vestibulum, ac suscipit augue commodo. Duis sit amet urna luctus, vehicula enim a, egestas tellus. Nullam est risus, laoreet quis nibh et, vehicula feugiat mi. Nam lacus odio, sodales sed luctus id, varius mattis diam. Pellentesque dictum rhoncus eros a rutrum. Nulla a rhoncus orci, vel ultricies lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras eu ipsum elementum, rutrum elit vehicula, scelerisque justo. Nam at tortor elit. Vestibulum vehicula pharetra purus. Pellentesque dapibus orci ut velit condimentum, ac sagittis nisl dignissim.",
 			"images": [
 				"https://pbs.twimg.com/profile_images/1130950496/agnes_despicable_me.png",
-			"http://www11.imagesandwallpapers.com/img/flipped_Cute_Despicable_Me_Agnes_HD_Wallpaper.jpg"
+				"https://pbs.twimg.com/profile_images/1130950496/agnes_despicable_me.png"
 			]
 		}
 	]
@@ -170,7 +170,7 @@ function displayEducation() {
 }
 
 function locationDisplay() {
-	//$("#map-div").append(googleMap);
+	$('#mapDiv').append(googleMap);
 }
 
 
@@ -183,37 +183,13 @@ displayEducation();
 locationDisplay();
 displayContacts($('#footerContacts'));
 
-//$(document).click(function (loc) {
-//	logClicks(loc.pageX, loc.pageY);
-//});
-//
+$(document).click(function (loc) {
+	logClicks(loc.pageX, loc.pageY);
+});
+
 //function inName(name1) {
 //	var names = name1.split(/\s+/);
 //	return names[0].charAt(0).toUpperCase + names[0].slice(1) + " " + names[1].toUpperCase;
 //}
 //
-//$("#main").append(internationalizeButton);
-
-function getTopMenu() {
-	var top = $('#floating-bar').position().top;
-
-	console.log(top);
-
-	var idName = $('#main').find('section:visible:first').attr('id');
-	if (idName === 'header') {
-		return '';
-	} else if(idName == 'workExperience') {
-		return 'Work Experiance';
-	} else if(idName == 'projects') {
-		return 'Projects';
-	} else if(idName == 'education') {
-		return 'Education';
-	} else if(idName == 'map-div') {
-		return 'Locations';
-	} else if(idName == 'lets-connect') {
-		return 'Contacts';
-	} else {
-		return '';
-	}
-
-}
+$('#main').append(internationalizeButton);
